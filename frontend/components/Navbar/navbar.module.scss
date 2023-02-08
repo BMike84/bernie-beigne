@@ -1,0 +1,127 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-black);
+  padding: 1rem 1.3rem;
+
+  ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    li {
+      margin: 0 2rem;
+      cursor: pointer;
+      color: var(--color-blue);
+      transition: 0.5s ease;
+
+      &:hover {
+        color: var(--color-pink);
+      }
+    }
+  }
+}
+
+.navbar_logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// when screen gets smaller and get tab
+
+.navbar_smallscreen {
+  display: none;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin: 2rem;
+      cursor: pointer;
+      color: var(--color-blue);
+      font-size: 2rem;
+      text-align: center;
+      font-family: var(--font-base);
+    }
+  }
+
+  .overlay__open {
+    color: var(--color-blue);
+  }
+}
+
+.navbar_smallscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 5;
+
+  ul {
+    justify-content: center;
+
+    li {
+      color: var(--color-pink);
+    }
+
+    a {
+      font-size: 23px;
+    }
+  }
+
+  .overlay__close {
+    font-size: 37px;
+    color: var(--color-pink);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    ul {
+      display: none;
+    }
+
+    svg {
+      font-size: 35px;
+    }
+  }
+
+  .navbar_smallscreen {
+    display: flex;
+    ul {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    padding: 1rem;
+
+    img {
+      width: 30%;
+      height: 30%;
+    }
+  }
+
+  .navbar_smallscreen_overlay {
+    ul {
+      margin-bottom: 100px;
+    }
+  }
+}
