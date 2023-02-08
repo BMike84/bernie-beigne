@@ -14,6 +14,10 @@
 .imageWrapper {
   width: 100%;
   z-index: -1;
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .btn {
@@ -48,11 +52,10 @@
     text-align: center;
     padding: 16px 14px 18px;
     color: #fff;
-    background-color: #0774c8;
+    background-color: var(--color-pink);
     height: 48px;
     &:hover {
-      background-color: var(--color-blue);
-      color: var(--color-black);
+      background-color: #a15b76;
     }
 
     @media screen and (max-width: 800px) {

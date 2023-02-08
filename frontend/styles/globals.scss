@@ -3,7 +3,7 @@
   --color-pink: #f093b7;
   --color-black: #0c0c0c;
   --color-gray: #545454;
-  --color-grey: #aaaaaa;
+  --color-grey: #dedada;
   --color-white: #ffffff;
 
   --font-base: "Cormorant Upright", serif;
@@ -37,7 +37,9 @@ a {
 
 .main-container {
   margin: auto;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-blue);
 }
 
 .p__opensans {
